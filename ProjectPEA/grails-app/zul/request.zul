@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page title="Energy Usage Calculator ::E-request::"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="projectpea.RequestComposer">
+
+        <div align="center"> 
+
+            <borderlayout height="3400px" width="1366px">
+                <north size="300px" border="0">
+                    <div align="center"> 
+                        <image src="ext/images/img/head-re.png"/> 
+                    </div>
+
+                </north>    
+
+                <west width="270px" border="0" flex="true" splittable="false" margins="0,0,0,0">
+
+                    <vlayout spacing="10">
+                        
+                                    <a image="ext/images/img/home-1.png" hoverImage="ext/images/img/home-2.png" href="index.zul"/>
+
+                                    <a image="ext/images/img/btn-1-2.png" hoverImage="ext/images/img/btn-1-2.png" href="request.zul"/>
+                                    <a image="ext/images/img/list-1-1.png" hoverImage="ext/images/img/list-1-2.png" href="list.zul"/>
+
+                                    <a image="ext/images/img/btn-2-1.png" hoverImage="ext/images/img/btn-2-2.png" href="euc.zul"/>
+                                    <a image="ext/images/img/pay1.png" hoverImage="ext/images/img/pay2.png" href="payment.zul"/>
+
+                                    <a image="ext/images/img/euc-1-1.png" hoverImage="ext/images/img/euc-1-2.png" href="type1.zul"/>
+                                    <a image="ext/images/img/euc-2-1.png" hoverImage="ext/images/img/euc-2-2.png" href="type2.zul"/>
+                                    <a image="ext/images/img/euc-3-1.png" hoverImage="ext/images/img/euc-3-2.png" href="type3.zul"/>
+                                    <a image="ext/images/img/euc-4-1.png" hoverImage="ext/images/img/euc-4-2.png" href="type4.zul"/>
+                                    <a image="ext/images/img/euc-5-1.png" hoverImage="ext/images/img/euc-5-2.png" href="type5.zul"/>
+                                    <a image="ext/images/img/euc-6-1.png" hoverImage="ext/images/img/euc-6-2.png" href="type6.zul"/>
+                                    <a image="ext/images/img/euc-7-1.png" hoverImage="ext/images/img/euc-7-2.png" href="type7.zul"/>
+                                    <a image="ext/images/img/euc-8-1.png" hoverImage="ext/images/img/euc-8-2.png" href="type8.zul"/>
+
+                                    <a image="ext/images/img/btn-3-1.png" hoverImage="ext/images/img/btn-3-2.png" href="admin.zul"/>
+                                    <a image="ext/images/img/userdata-1.png" hoverImage="ext/images/img/userdata-2.png" href="useredit.zul"/>  
+                                    
+                                                            
+
+                    </vlayout>
+                </west> 
+
+                <center>
+                    <borderlayout>
+                        <north border="0" height="120px">
+                            <panel>
+                                <panelchildren>
+                                    <div align="left">
+                                        <hbox>
+                                            <image src="ext/images/img/logo.png"/>
+                                            <vbox>                                                
+                                                <h:br />                                               
+                                                <label value="มหาวิทยาลัยเทคโนโลยีสุรนารี"/>
+                                                <label value="111 ,ถนนมหาวิทยาลัย ,เมือง ,จ.นครราชสีมา,"/>
+                                                <label value="ประเทศไทย ,30000 ไทย"/>
+                                            </vbox>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <image src="ext/images/img/online.gif"/>
+                                                                                        
+                                            <label value="User :" style="font-weight: bold;"/>
+                                            <label id="userlogin" style="color:red"/>
+
+                                            <h:br/><h:br/><h:br/>
+                                            <vbox>
+                                                <a id="logout" image="ext/images/img/logout.png"/>
+                                                <image src="ext/images/img/offline.png"/>
+                                            </vbox>    
+                                            
+                                        </hbox>
+                                    </div>
+                                </panelchildren>           
+                            </panel>    
+
+                        </north>
+                        <center border="0">                            
+                                <panel height="98%" width="1000px">                            
+                                    <panelchildren>
+
+                                    <div align="left">                          
+                                   
+                                        <hbox>
+                                            <label value="1.ชื่อผู้ใช้ไฟฟ้า/ลูกค้า :" style="font-weight: bold;"/>                                                        
+                                                <textbox id="name" width="300px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />      
+
+                                            <label value="ประเภทบัตร :" />
+                                                <textbox id="card" width="300px" mold="rounded"/>
+                                        </hbox>                                                                                
+                                            <h:br/>
+                                        <hbox>
+                                            <label value="เลขที่ :" />
+                                                <textbox id="cardno" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />         
+                                            <label value="หมายเลขประจำตัวผู้เสียภาษีอากร :" />
+                                                <textbox id="cardd" width="300px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ที่อยู่ รหัสบ้าน :" />                                                        
+                                                <textbox id="idhome" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="เลขที่ :" />
+                                                <textbox id="nohome" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่บ้านอาคาร :" />
+                                                <textbox id="nhome" width="200px" mold="rounded"/> 
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ห้อง :" />
+                                                <textbox id="room" width="80px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ชั้น :" />
+                                                <textbox id="floor" width="80px" mold="rounded"/>                       
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตรอก :" />
+                                                <textbox id="trog" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ซอย :" />
+                                                <textbox id="soy" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ถนน :" />
+                                                <textbox id="road" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่ที่ :" />
+                                                <textbox id="moo" width="80px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตำบล :" />
+                                                <textbox id="tumbon" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="อำเภอ :" />
+                                                <textbox id="aumpher" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="จังหวัด :" />
+                                                <textbox id="city" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="รหัสไปรษณีย์ :" />
+                                                <textbox id="post" width="100px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="โทรศัพท์ :" />
+                                                <textbox id="tel" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="โทรสาร :" />
+                                                <textbox id="fax" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="E-mail :" />
+                                                <textbox id="mail" width="200px" mold="rounded"/>                                                    
+                                        </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="2.สถานที่ขอใช้บริการ :" style="font-weight: bold;"/>
+                                                <h:br />
+                                                    <h:br />
+                                                <radiogroup id="base">
+                                                <hbox>
+                                                    <radio label="เอกชน" />
+                                                    <h:br />
+                                                        <h:br />
+                                                        
+                                                    <radio label="ราชการ" />
+                                                    <h:br />
+                                                        <h:br />    
+                                                    <radio label="รัฐวิสาหกิจ" />
+                                                    <h:br />
+                                                        <h:br />
+                                                    <radio label="อื่นๆ " />
+                                                </hbox>                                                       
+                                                </radiogroup>
+                                                
+                                                <textbox id="etc" width="200px" mold="rounded"/>                                                                                                        
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ชื่อสถานที่ขอใช้ไฟฟ้า:" />
+                                                <textbox id="namebase" width="750px" mold="rounded"/>                                                    
+                                                                                                
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ที่อยู่ รหัสบ้าน :" />                                                        
+                                                <textbox id="idhome2" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="เลขที่ :" />
+                                                <textbox id="nohome2" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่บ้านอาคาร :" />
+                                                <textbox id="nhome2" width="200px" mold="rounded"/> 
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ห้อง :" />
+                                                <textbox id="room2" width="80px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ชั้น :" />
+                                                <textbox id="floor2" width="80px" mold="rounded"/>                       
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตรอก :" />
+                                                <textbox id="trog2" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ซอย :" />
+                                                <textbox id="soy2" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ถนน :" />
+                                                <textbox id="road2" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่ที่ :" />
+                                                <textbox id="moo2" width="80px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตำบล :" />
+                                                <textbox id="tumbon2" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="อำเภอ :" />
+                                                <textbox id="aumpher2" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="จังหวัด :" />
+                                                <textbox id="city2" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="รหัสไปรษณีย์ :" />
+                                                <textbox id="post2" width="100px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="โทรศัพท์ :" />
+                                                <textbox id="tel2" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="โทรสาร :" />
+                                                <textbox id="fax2" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="E-mail :" />
+                                                <textbox id="mail2" width="200px" mold="rounded"/>                                                    
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ประเภทกิจการ :" />
+                                                <textbox id="typesme" width="800px" mold="rounded"/>                                                                                                       
+                                        </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>    
+                                            <h:br />
+                                        <hbox>
+                                            <label value="3.สถานที่ติดต่อ :" style="font-weight: bold;"/>
+                                                <textbox id="contact" width="800px" mold="rounded"/>                                                                                                       
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ที่อยู่ รหัสบ้าน :" />                                                        
+                                                <textbox id="idhome3" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="เลขที่ :" />
+                                                <textbox id="nohome3" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่บ้านอาคาร :" />
+                                                <textbox id="nhome3" width="200px" mold="rounded"/> 
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ห้อง :" />
+                                                <textbox id="room3" width="80px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ชั้น :" />
+                                                <textbox id="floor3" width="80px" mold="rounded"/>                       
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตรอก :" />
+                                                <textbox id="trog3" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ซอย :" />
+                                                <textbox id="soy3" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ถนน :" />
+                                                <textbox id="road3" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่ที่ :" />
+                                                <textbox id="moo3" width="80px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตำบล :" />
+                                                <textbox id="tumbon3" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="อำเภอ :" />
+                                                <textbox id="aumpher3" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="จังหวัด :" />
+                                                <textbox id="city3" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="รหัสไปรษณีย์ :" />
+                                                <textbox id="post3" width="100px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="โทรศัพท์ :" />
+                                                <textbox id="tel3" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="โทรสาร :" />
+                                                <textbox id="fax3" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="E-mail :" />
+                                                <textbox id="mail3" width="200px" mold="rounded"/>                                                    
+                                        </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="4.มีความประสงค์ ดังนี้ :" style="font-weight: bold;"/>
+                                        </hbox>
+                                                <h:br />                                                   
+                                                <radiogroup id="want">
+                                                <hbox>
+                                                    <radio label="ขอติดตั้งมิเตอร์ใหม่" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br />
+                                                    <radio label="ขอติดตั้งไฟฟ้าชั่วคราว" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+
+                                                    <radio label="ขอใช้ไฟฟ้าสาธารณะ" />
+                                                    <h:br />
+                                                </hbox> 
+                                                <hbox>        
+                                                    <radio label="ขอตัดฝากมิเตอร์โดยไม่ใช้ไฟฟ้า" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br />                                                  
+                                                    
+
+                                                    <radio label="ขอตัดฝากมิเตอร์เพื่อใช้แสงสว่างโดยไม่ลด CT" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br />
+                                                    
+                                                    <radio label="ขอตัดฝากมิเตอร์เพื่อใช้แสงสว่างโดยลด CT" />
+                                                                                                       
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="ขอต่อกลับการใช้ไฟฟ้า" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />                                                 
+                                                    
+
+                                                    <radio label="ขอยกเลิกการใช้ไฟฟ้า" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br />
+                                                    
+                                                    <radio label="ขอย้ายจุดมิเตอร์/อุปกรณ์ประกอบ" />                                                    
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="ขอเพิ่มขนาดมิเตอร์/อุปกรณ์ประกอบ" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />                               
+    
+                                                    <radio label="ขอลดขนาดมิเตอร์/อุปกรณ์ประกอบ" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br />
+
+                                                    <radio label="ขอเปลี่ยนมิเตอร์กรณีชำรุด" />
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="ขอเปลี่ยนประเภทมิเตอร์" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />
+    
+                                                    <radio label="ขอเปลียนประเภทการใช้ไฟฟ้า" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br />                                                                                                       
+                                                    <radio label="แก้ไขข้อมูลประวัติ" />                                                    
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="ขอหยุดซ่อมแซมเครื่องจักรประจำปี" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+    
+                                                    <radio label="โอนเปลี่ยนชื่อกรณีเปลี่ยนเจ้าของ" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                       
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br />
+
+                                                    <radio label="ขอใช้ไฟฟ้าตู้โทรศัพท์ต่อตรง" />                                                    
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="ขอใช้ไฟฟ้าชั่วคราวแบบเหมาจ่าย" />                                                                                                 
+                                                </hbox>
+                                                <label value="อื่นๆ : " />
+                                                <textbox id="want2" width="500px" mold="rounded"/>
+                                                </radiogroup>
+                                                <h:br />
+                                                <h:br />
+                                                    <separator bar="true"/>
+                                                <h:br />
+                                                <hbox>
+                                                    <label value="5.ประเภทการใช้ไฟฟ้า :" style="font-weight: bold;"/>
+                                                </hbox>  
+                                                <h:br />
+                                                <radiogroup id="typeuse">
+                                                <hbox>                                                    
+                                                    <radio label="บ้านที่อยู่อาศัย" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />
+    
+                                                    <radio label="กิจการขนาดเล็ก" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />                                                                                                       
+                                                    <radio label="กิจการขนาดกลาง" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />                                                                                                      
+                                                    <radio label="กิจการขนาดใหญ่" />                                                   
+                                                </hbox>
+                                                <hbox>
+                                                    <radio label="กิจการเฉพาะอย่าง" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br />
+
+                                                    <radio label="ราชการ/องค์กรไม่แสวงหากำไร" />
+                                                    <h:br /><h:br />
+                                                                                                                                                          
+                                                    <radio label="สูบน้ำเพื่อการเกษตร" />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br />
+                                                                                                                                                          
+                                                    <radio label="ไฟฟ้าชั่วคราว" />                                                  
+                                                </hbox>
+                                                <radio label="อื่นๆ" />
+                                                
+                                                <textbox id="typeetc" width="500px" mold="rounded"/>
+                                                </radiogroup>                                                 
+                                                <h:br />
+                                                <h:br />
+                                                    <separator bar="true"/>
+                                                <h:br />
+                                                <hbox>
+                                            <label value="6.อุปกรณ์ที่ติดตั้ง :" style="font-weight: bold;"/>                                                     
+                                        </hbox>                                                                                
+                                            <h:br/>
+                                        <hbox>
+                                            <label value="(1) หม้อแปลงขนาด :" style="font-weight: bold;"/>
+                                                <textbox id="miteruse" width="100px" mold="rounded"/>
+                                                    <label value="เควีเอ" />
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />         
+                                            <label value="จำนวน :" style="font-weight: bold;"/>
+                                                <textbox id="miternum" width="100px" mold="rounded"/>
+                                                    <label value="เครื่อง" />
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="(2) เครื่องปรับอากาศ :" style="font-weight: bold;"/>                                                        
+                                                <textbox id="airweight" width="100px" mold="rounded"/>
+                                                    <label value="ตัน/บีทียู" />
+                                                    <h:br />                                                      
+                                                <textbox id="airnum" width="100px" mold="rounded"/>
+                                                    <label value="เครื่อง" />                                                                          
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="(3) ดวงโคม :" style="font-weight: bold;"/>
+                                                <textbox id="lamp" width="100px" mold="rounded"/>
+                                                    <label value="ดวง" />
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="(4) เต้าเสียบ :" style="font-weight: bold;"/>
+                                                <textbox id="plug" width="100px" mold="rounded"/>                                                    
+                                                    <label value="ชุด" />
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="(5) พัดลม :" style="font-weight: bold;"/>
+                                                <textbox id="fan" width="100px" mold="rounded"/>
+                                                    <label value="เครื่อง" />                                                  
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="(6) อื่นๆ :" style="font-weight: bold;"/>
+                                                <textbox id="etc6" width="500px" mold="rounded"/>
+                                                                                                       
+                                        </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="7.กำหนดการใช้ไฟฟ้า " style="font-weight: bold;"/>
+                                                <h:br />
+                                                    <h:br />
+                                                <datebox id="dateuse" width="200px" mold="rounded"/>                                                                                                        
+                                        </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="8.ผู้ขอใช้ไฟฟ้ามีความประสงค์ที่จะชำระเงินค่าไฟฟ้าประจำเดือนด้วย : " style="font-weight: bold;"/>
+
+                                                <radiogroup id="pay">
+                                                    <hbox>                                                                                                   
+                                                    <radio label="เงินสด" />                                                 
+                                                    <h:br />
+                                                    <h:br />
+                                                    <h:br />
+                                                    <radio label="หักจากบัญชีเงินฝากธนาคาร" />
+                                                    </hbox>
+                                                </radiogroup>                                
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ทั้งนี้ กฟภ. สามารถเรียกเก็บเงินค่ากระแสไฟฟ้าดังกล่าวได้จาก :" />                                                        
+                                                <textbox id="payment" width="500px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ที่อยู่ รหัสบ้าน :" />                                                        
+                                                <textbox id="idhome4" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="เลขที่ :" />
+                                                <textbox id="nohome4" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่บ้านอาคาร :" />
+                                                <textbox id="nhome4" width="200px" mold="rounded"/> 
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ห้อง :" />
+                                                <textbox id="room4" width="80px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ชั้น :" />
+                                                <textbox id="floor4" width="80px" mold="rounded"/>                       
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตรอก :" />
+                                                <textbox id="trog4" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ซอย :" />
+                                                <textbox id="soy4" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="ถนน :" />
+                                                <textbox id="road4" width="100px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="หมู่ที่ :" />
+                                                <textbox id="moo4" width="80px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="ตำบล :" />
+                                                <textbox id="tumbon4" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="อำเภอ :" />
+                                                <textbox id="aumpher4" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="จังหวัด :" />
+                                                <textbox id="city4" width="150px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="รหัสไปรษณีย์ :" />
+                                                <textbox id="post4" width="100px" mold="rounded"/>
+                                        </hbox>
+                                            <h:br />
+                                        <hbox>
+                                            <label value="โทรศัพท์ :" />
+                                                <textbox id="tel4" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="โทรสาร :" />
+                                                <textbox id="fax4" width="200px" mold="rounded"/>
+                                                    <h:br />
+                                                        <h:br />
+                                                            <h:br />
+                                                                <h:br />
+                                                                    <h:br />
+                                            <label value="E-mail :" />
+                                                <textbox id="mail4" width="200px" mold="rounded"/>                                                    
+                                        </hbox>
+                                            <h:br />                                        
+                                            <separator bar="true"/>    
+                                            <h:br />
+                                            <h:br />
+                                            <label value="ข้อตกลงการใช้ไฟฟ้า :-" style="font-size: 18px;font-weight: bold; font-style: italic;"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="1. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ผู้ใช้ไฟฟ้า/ลูกค้า จะรับผิดชอบและสอดส่องดูแลมาตรวัดไฟฟ้าและอุปกรณ์ประกอบทั้งกรณีติดตั้งในที่สาธารณะหรือในความครอบครองของผู้ใช้ไฟฟ้า/ลูกค้ามิให้ชำรุดเสียหาย กับทั้งจะไม่ยินยอมให้ผู้อื่นต่อพ่วงไฟฟ้าไปใช้สถานที่อื่น นอกเหนือจากที่ระบุไว้ในคำร้องขอใช้ไฟฟ้า"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="2. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ผู้ใช้ไฟฟ้า/ลูกค้า ต้องชำระค่าไฟฟ้าประจำเดือนตามใบแจ้งหนี้ที่การไฟฟ้าส่วนภูมิภาคแจ้งให้ชำระภายใน 7 วันนับตั้งแต่วันที่ได้รับใบแจ้งหนี้"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="3. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ผู้ใช้ไฟฟ้า/ลูกค้า ต้องวางหลักประกันการใช้ไฟฟ้า ตามจำนวนที่การไฟฟ้าส่วนภูมิภาคกำหนด และเมื่อเลิกใช้ไฟฟ้า โดยไม่มีหนี้ค้างชำระ การไฟฟ้าส่วนภูมิภาคจะคืนหลักประกันภายในไม่เกิน 20 วันทำการ นับตั้งแต่วันที่ผู้ใช้ไฟฟ้า/ลูกค้าร้องขอคืน"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="4. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="หากมีหลักฐานเชื่อได้ว่าผู้ใช้ไฟฟ้าละเมิดการใช้ไฟฟ้า หรือมีเจตนากระทำ หรือใช้ให้กระทำการละเมิดการใช้ไฟฟ้า โดยการทำลายหรือดัดแปลงแก้ไขมาตรวัดไฟฟ้าและหรืออุปกรณ์ประกอบใดๆ ตลอดจนเครื่องหมายหรือตราต่างๆ ทำให้มาตรวัดไฟฟ้าอ่านคลาดเครื่อน หรือเป็นผลให้การไฟฟ้าส่วนภูมิภาคต้องสูญเสียผลประโยชน์อันพึงได้ หรือกระทำอื่นใดที่มี ลักษณะคล้ายคลึงกันหรือทำนองเดียวกัน หรือต่อไฟตรงโดยไม่ผ่านมาตรวัดไฟฟ้า ผู้ใช้ไฟยินยอมชำระค่าเสียหายตามประกาศ เรื่องการเรียกเงินในกรณี ละเมิดการใช้ไฟฟ้า ลงวันที่"/>
+                                                    <label value="15 กุมภาพันธ์ 2539" style="font-weight: bold; font-style: italic;"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="5. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ในกรณีมาตรวัดไฟฟ้าแสดงค่าคลาดเคลื่อน ผู้ใช้ไฟฟ้า/ลูกค้า ต้องยินยอมชำระค่าไฟฟ้าประจำเดือนไปก่อน ตามค่าเฉลี่ยของ 3 เดือนหลังสุดที่ถือว่าปกติติดต่อกัน หรือค่าไฟฟ้าที่คำนวณบนพื้นฐานวิศวกรรมไฟฟ้า โดยอาศัยหลักฐานข้อมูล ซึ่งตรวจสอบได้ในช่วงเวลานั้นหากภายหลังผลการตรวจสอบเครื่องวัดมีผลแตกต่างจากที่เรียกเก็บไปแล้ว การไฟฟ้าส่วนภูมิภาคจะเรียกเก็บเพิ่มหรือจ่ายคืนแล้วแต่กรณี"/>       
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="6. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ในกรณีที่การไฟฟ้าส่วนภูมิภาคเห็นเป็นการจำเป็นหรือสมควรจะหยุดหรือลดการส่งพลังงานไฟฟ้า เพื่อปฏิบัติงานตามแผนเป็นการชั่วคราวการไฟฟ้าส่วนภูมิภาคจะแจ้งวันเวลาดับไฟฟ้าให้ผู้ใช้ไฟฟ้า/ลูกค้า ทราบทางสื่อมวลชน หรือเครื่องขยายเสียง หรือปิดประกาศให้ทราบล่วงหน้าไม่น้อยกว่า 48 ชั่วโมง ก่อนการดับไฟฟ้า(เว้นแต่ในกรณีฉุกเฉิน)"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="7. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="ผู้ใช้ไฟฟ้า/ลูกค้า จะปฏิบัติข้อบังคับ ระเบียบ คำสั่ง และประกาศของการไฟฟ้าส่วนภูมิภาคที่เกี่ยวกับการใช้ไฟฟ้าทุกประเภทที่เกี่ยวกับการใช้ไฟฟ้าทุกประการและที่เปลี่ยนแปลงแก้ไขหรือตราขึ้นใหม่ที่ไม่ทำให้ผู้ใช้ไฟฟ้า/ลูกค้า และการไฟฟ้าส่วนภูมิภาคเสียประโยชน์ไปกว่าข้อตกลงนี้เว้นแต่การแก้ไขนั้นเป็นไปเพื่อปรับปรุงงานบริการประชาชนโดยรวมให้ดีขึ้น โดยการไฟฟ้าส่วนภูมิภาคจะประกาศให้ทราบทางสื่อมวลชนล่วงหน้าไม่น้อยกว่า 30 วัน หรือแจ้งให้ทราบพร้อมใบแจ้งหนี้ค่าไฟฟ้า"/>
+                                                <h:br />
+                                                <h:br />
+                                                    <label value="8. " style="font-weight: bold; font-style: italic;"/>
+                                                    <label value="หากผู้ใช้ไฟฟ้า/ลูกค้า ไม่ปฏิบัติตามข้อตกลงใช้ไฟฟ้าข้อหนึ่งข้อใดข้างต้น ผู้ใช้ไฟยินยอมให้ การไฟฟ้าส่วนผู้มิภาค งดจ่ายไฟได้ โดยการไฟฟ้าส่วนภูมิภาคไม่ต้องรับผิดชอบต่อความเสียหายใดๆ ทั้งสิ้น ทั้งนี้ ในการงดจ่ายไฟฟ้า การไฟฟ้าส่วนภูมิภาค จะแจ้งให้ผู้ใช้ไฟฟ้าทราบล่วงหน้าไม่น้อยกว่า 3 วัน"/>                
+                                                <h:br />
+                                                <h:br />
+                                                <separator bar="true"/>
+                                                <h:br />
+                                                    <div align="center">                                                        
+                                                        <checkbox id="confirm" label="_ฉันได้อ่านแล้ว และยอมรับข้อตกลงของ กฟภ." /> 
+                                                    </div>
+                                                <h:br />
+
+
+                                                <div align="center">
+                                                    <button id="submit" label="ยืนยัน" mold="trendy"/>
+                                                </div>                                                                                                      
+                                        
+
+                                    </div>           
+
+                                    </panelchildren>
+                                </panel>                                                                
+                        </center>
+                    </borderlayout>
+                </center>
+
+                <south size="40px" border="0" style="background: none repeat scroll 0 0 ;">
+                    <toolbar mold="panel" align="center">
+                            423494 COMPUTER ENGINEERING STUDY PROJECT | ADMIN
+                            <toolbarbutton label="PORNCHAI BUASANG"/>
+                    </toolbar>
+                </south>
+            </borderlayout>            
+        </div>
+
+    </window>
+
+</zk>

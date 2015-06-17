@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page title="Energy Usage Calculator ::HOME::"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="projectpea.IndexComposer">
+
+        <div align="center"> 
+
+            <borderlayout height="1500px" width="1366px">
+                <north size="300px" border="0">
+                    <div align="center"> 
+                        <image src="ext/images/img/head-home.png"/> 
+                    </div>
+
+                </north>    
+
+                <west width="270px" border="0" flex="true" splittable="false" margins="0,0,0,0">
+
+                    <vlayout spacing="10">
+                        
+                                    <a image="ext/images/img/home-2.png" hoverImage="ext/images/img/home-2.png" href="index.zul"/>
+
+                                    <a image="ext/images/img/btn-1-1.png" hoverImage="ext/images/img/btn-1-2.png" href="request.zul"/>
+                                    <a image="ext/images/img/list-1-1.png" hoverImage="ext/images/img/list-1-2.png" href="list.zul"/>
+
+                                    <a image="ext/images/img/btn-2-1.png" hoverImage="ext/images/img/btn-2-2.png" href="euc.zul"/>
+                                    <a image="ext/images/img/pay1.png" hoverImage="ext/images/img/pay2.png" href="payment.zul"/>
+                                    
+                                    <a image="ext/images/img/euc-1-1.png" hoverImage="ext/images/img/euc-1-2.png" href="type1.zul"/>
+                                    <a image="ext/images/img/euc-2-1.png" hoverImage="ext/images/img/euc-2-2.png" href="type2.zul"/>
+                                    <a image="ext/images/img/euc-3-1.png" hoverImage="ext/images/img/euc-3-2.png" href="type3.zul"/>
+                                    <a image="ext/images/img/euc-4-1.png" hoverImage="ext/images/img/euc-4-2.png" href="type4.zul"/>
+                                    <a image="ext/images/img/euc-5-1.png" hoverImage="ext/images/img/euc-5-2.png" href="type5.zul"/>
+                                    <a image="ext/images/img/euc-6-1.png" hoverImage="ext/images/img/euc-6-2.png" href="type6.zul"/>
+                                    <a image="ext/images/img/euc-7-1.png" hoverImage="ext/images/img/euc-7-2.png" href="type7.zul"/>
+                                    <a image="ext/images/img/euc-8-1.png" hoverImage="ext/images/img/euc-8-2.png" href="type8.zul"/>
+
+                                    <a image="ext/images/img/btn-3-1.png" hoverImage="ext/images/img/btn-3-2.png" href="admin.zul"/>
+                                    <a image="ext/images/img/userdata-1.png" hoverImage="ext/images/img/userdata-2.png" href="useredit.zul"/>  
+                                    
+                                                            
+
+                    </vlayout>
+                </west> 
+
+                <center>
+                    <borderlayout>
+                        <north border="0" height="120px">
+                            <panel>
+                                <panelchildren>
+                                    <div align="left">
+                                        <hbox>
+                                            <image src="ext/images/img/logo.png"/>
+                                            <vbox>                                                
+                                                <h:br />                                               
+                                                <label value="มหาวิทยาลัยเทคโนโลยีสุรนารี"/>
+                                                <label value="111 ,ถนนมหาวิทยาลัย ,เมือง ,จ.นครราชสีมา,"/>
+                                                <label value="ประเทศไทย ,30000 ไทย"/>
+                                            </vbox>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <image src="ext/images/img/online.gif"/>
+                                                                                        
+                                            <label value="User :" style="font-weight: bold;"/>
+                                            <label id="userlogin" style="color:red"/>
+
+                                            <h:br/><h:br/><h:br/>
+                                            
+                                            <vbox>
+                                                <a id="logout" image="ext/images/img/logout.png"/>
+                                                <image src="ext/images/img/offline.png"/>
+                                            </vbox>    
+                                            
+                                        </hbox>
+                                    </div>
+                                </panelchildren>           
+                            </panel>    
+
+                        </north>
+                        <center border="0" margins="0,5,5,5">
+           
+                            
+                        </center>
+                    </borderlayout>
+                    
+                    </center>
+
+                <south size="40px" border="0" style="background: none repeat scroll 0 0 ;">
+                    <toolbar mold="panel" align="center">
+                            423494 COMPUTER ENGINEERING STUDY PROJECT | ADMIN
+                            <toolbarbutton label="PORNCHAI BUASANG"/>
+                    </toolbar>
+                </south>
+            </borderlayout>            
+        </div>
+
+    </window>
+
+</zk>

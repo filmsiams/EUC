@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page title="::Type7-Water Pump::"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <style>
+        .rosy {
+        color: #fae7e9;
+        border: solid 1px #b73948;
+        background: #da5867;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f16c7c), to(#bf404f));
+        background: -moz-linear-gradient(top,  #f16c7c,  #bf404f);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f16c7c', endColorstr='#bf404f');
+        }
+        .rosy:hover {
+        background: #ba4b58;
+        background: -webkit-gradient(linear, left top, left bottom, from(#cf5d6a), to(#a53845));
+        background: -moz-linear-gradient(top,  #cf5d6a,  #a53845);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf5d6a', endColorstr='#a53845');
+        }
+        .rosy:active {
+        color: #dca4ab;
+        background: -webkit-gradient(linear, left top, left bottom, from(#bf404f), to(#f16c7c));
+        background: -moz-linear-gradient(top,  #bf404f,  #f16c7c);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf404f', endColorstr='#f16c7c');
+        }
+    </style>
+
+    <window apply="projectpea.Type71Composer">
+
+        <div align="center"> 
+
+            <borderlayout height="2200px" width="1366px">
+                <north size="300px" border="0">
+                    <div align="center"> 
+                        <image src="ext/images/img/head-euc.png"/> 
+                    </div>
+
+                </north>    
+
+                <west width="270px" border="0" flex="true" splittable="false" margins="0,0,0,0">
+
+                    <vlayout spacing="10">
+                        
+                                    <a image="ext/images/img/home-1.png" hoverImage="ext/images/img/home-2.png" href="index.zul"/>
+
+                                    <a image="ext/images/img/btn-1-1.png" hoverImage="ext/images/img/btn-1-2.png" href="request.zul"/>
+                                    <a image="ext/images/img/list-1-1.png" hoverImage="ext/images/img/list-1-2.png" href="list.zul"/>
+
+                                    <a image="ext/images/img/btn-2-2.png" hoverImage="ext/images/img/btn-2-2.png" href="type1.zul"/>
+                                    <a image="ext/images/img/pay1.png" hoverImage="ext/images/img/pay2.png" href="payment.zul"/>
+
+                                    <a image="ext/images/img/euc-1-1.png" hoverImage="ext/images/img/euc-1-2.png" href="type1.zul"/>
+                                    <a image="ext/images/img/euc-2-1.png" hoverImage="ext/images/img/euc-2-2.png" href="type2.zul"/>
+                                    <a image="ext/images/img/euc-3-1.png" hoverImage="ext/images/img/euc-3-2.png" href="type3.zul"/>
+                                    <a image="ext/images/img/euc-4-1.png" hoverImage="ext/images/img/euc-4-2.png" href="type4.zul"/>
+                                    <a image="ext/images/img/euc-5-1.png" hoverImage="ext/images/img/euc-5-2.png" href="type5.zul"/>
+                                    <a image="ext/images/img/euc-6-1.png" hoverImage="ext/images/img/euc-6-2.png" href="type6.zul"/>
+                                    <a image="ext/images/img/euc-7-2.png" hoverImage="ext/images/img/euc-7-2.png" href="type7.zul"/>
+                                    <a image="ext/images/img/euc-8-1.png" hoverImage="ext/images/img/euc-8-2.png" href="type8.zul"/>
+
+                                    <a image="ext/images/img/btn-3-1.png" hoverImage="ext/images/img/btn-3-2.png" href="admin.zul"/>
+                                    <a image="ext/images/img/userdata-1.png" hoverImage="ext/images/img/userdata-2.png" href="useredit.zul"/>  
+
+                    </vlayout>
+                </west> 
+
+                <center>
+                    <borderlayout>
+                        <north border="0" height="120px">
+                            <panel>
+                                <panelchildren>
+                                    <div align="left">
+                                        <hbox>
+                                            <image src="ext/images/img/logo.png"/>
+                                            <vbox>                                                
+                                                <h:br />                                               
+                                                <label value="มหาวิทยาลัยเทคโนโลยีสุรนารี"/>
+                                                <label value="111 ,ถนนมหาวิทยาลัย ,เมือง ,จ.นครราชสีมา,"/>
+                                                <label value="ประเทศไทย ,30000 ไทย"/>
+                                            </vbox>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <image src="ext/images/img/online.gif"/>
+                                                                                        
+                                            <label value="User :" style="font-weight: bold;"/>
+                                            <label id="userlogin" style="color:red"/>
+
+                                            <h:br/><h:br/><h:br/>
+                                            
+                                            <vbox>
+                                                <a id="logout" image="ext/images/img/logout.png"/>
+                                                <image src="ext/images/img/offline.png"/>
+                                            </vbox>    
+                                            
+                                        </hbox>
+                                    </div>
+                                </panelchildren>           
+                            </panel>    
+
+                        </north>
+                        <center border="0">
+                            <panel height="98%" width="1000px">                            
+                                    <panelchildren>                                        
+                                        <image src="ext/images/img/waterpump.png"/>
+                                        <vbox>
+                                            <label value="ประเภทที่ 7 กิจการสูบน้ำเพื่อการเกษตร" style="font-size:20px;font-weight:bold;color:#ed145b"/>
+                                            <label value="ลักษณะการใช้สำหรับการใช้ไฟฟ้ากับเครื่องสูบน้ำเพื่อการเกษตรของหน่วยราชการ สำนักงาน หรือหน่วยงานอื่นใดของรัฐ องค์กรปกครองส่วนท้องถิ่น กลุ่มเกษตรกรที่ทางราชการรับรอง หรือสหกรณ์เพื่อการเกษตร โดยต่อผ่านเครื่องวัดหน่วยไฟฟ้าเครื่องเดียว"/>
+                                            <h:br />
+                                            <separator bar="true"/>    
+                                            <h:br />
+                                            <hbox>
+                                                <label value="ประเภทที่ 7" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                
+                                                <vbox>
+                                                    <hbox>                                                        
+                                                        <button id="1" label="กิจการสูบน้ำเพื่อการเกษตร อัตรา 7.1 (อัตราปกติ)"/>                                                        
+                                                    </hbox>
+                                                    <hbox>                                                        
+                                                        <button id="2" sclass="rosy" label="กิจการสูบน้ำเพื่อการเกษตร อัตรา 7.2 (อัตราTOU)"/>
+                                                    </hbox>                                                                                     
+                                                </vbox>
+                                            </hbox>
+                                            <h:br /><h:br />
+                                            <hbox>                                                
+                                                    <label value="รหัสแรงดันไฟฟ้า" style="font-weight:bold"/>
+
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+
+                                                    <radiogroup id="volts">
+                                                        <vbox>                                                  
+                                                            <radio label="แรงดัน 12 - 24 กิโลโวลต์" />
+                                                            <radio label="แรงดันต่ำกว่า 12 กิโลโวลต์" />
+                                                        </vbox>
+                                                    </radiogroup>
+                                            </hbox>
+                                            <h:br /><h:br />
+                                            <hbox>
+                                                <label value="ความต้องการพลังไฟฟ้าช่วง On Peak" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />                                                                                             
+                                                <textbox id="wanton" value="0" style="font-weight:bold"/>
+                                                <label value="กิโลวัตต์"/>
+                                            </hbox>                                            
+                                            <hbox>
+                                                <label value="ความต้องการพลังไฟฟ้าช่วง Off Peak" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br />                                                
+                                                <textbox id="wantoff" value="0" style="font-weight:bold"/>
+                                                <label value="กิโลวัตต์"/>
+                                            </hbox>
+                                            <hbox>
+                                                <label value="พลังงานไฟฟ้าช่วง On Peak" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <textbox id="poweron" value="0" style="font-weight:bold"/>
+                                                <label value="กิโลวัตต์-ชั่วโมง"/>
+                                            </hbox>
+                                            <hbox>
+                                                <label value="พลังงานไฟฟ้าช่วง Off Peak" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <textbox id="poweroff" value="0" style="font-weight:bold"/>
+                                                <label value="กิโลวัตต์-ชั่วโมง"/>
+                                            </hbox>                                            
+                                            <hbox>
+                                                <label value="การปรับอัตราค่าไฟฟ้าโดย อัตโนมัติ (Ft)" style="font-weight:bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <textbox id="ft" value="58.96" disabled="true" style="font-weight:bold"/>
+                                                <label value="สตางค์ / หน่วย"/>
+                                            </hbox>
+                                            <hbox>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br />                                            
+                                            </hbox>
+                                            <h:br />
+                                            <hbox>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br />
+                                            <image id="cal1"/>
+                                            <image id="cal2"/>
+                                            </hbox>
+                                            <label value="ส่วนที่ 1 ค่าไฟฟ้าฐาน" style="font-weight:bold"/>
+                                                <hbox>
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <label value="1.1 ค่าความต้องการพลังไฟฟ้า" style="font-weight:bold"/>
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <textbox id="b1" disabled="true" style="font-weight:bold"/>
+                                                    <label value="บาท"/>
+                                                </hbox>
+                                                <hbox>
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <label value="1.2 ค่าพลังงานไฟฟ้า" style="font-weight:bold"/>
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br />
+                                                        <textbox id="b2" disabled="true" style="font-weight:bold"/>
+                                                        <label value="บาท"/>
+                                                </hbox>
+                                                <hbox>
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <label value="1.3 ค่าบริการ" style="font-weight:bold"/>
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                        <h:br /><h:br /><h:br />
+                                                        <textbox id="service" disabled="true" style="font-weight:bold"/>
+                                                        <label value="บาท"/>                                                      
+                                                </hbox>                                                                                                                
+                                                
+                                            <hbox>
+                                                <label value="รวมค่าไฟฟ้าฐาน" style="font-weight:bold;color:#ed145b"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />                                               
+                                                <textbox id="sum" style="font-weight:bold;color:#ed145b"/>
+                                                <label value="บาท"/>
+                                            </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>    
+                                            <h:br />
+
+                                            <label value="ส่วนที่ 2 ค่าไฟฟ้าผันแปร ( Ft )" style="font-weight:bold"/>
+                                                <hbox>
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <label value="จำนวนพลังงานไฟฟ้า x ค่า Ft" />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />
+                                                    <textbox id="ftd" disabled="true" style="font-weight:bold"/>
+                                                    <label value="บาท"/>
+                                                </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>    
+                                            <h:br />
+
+                                            <label value="ส่วนที่ 3 ค่าภาษีมูลค่าเพิ่ม 7%" style="font-weight:bold"/>
+                                                <hbox>
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <label value="(ค่าไฟฟ้าฐาน + ค่า Ft) x 7/100" />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <textbox id="vat" disabled="true" style="font-weight:bold"/>
+                                                    <label value="บาท"/>
+                                                </hbox>
+                                            <h:br />
+                                            <separator bar="true"/>    
+                                            <h:br />
+
+                                                <hbox>
+                                                    <label value="รวมเงินค่าไฟฟ้า" style="font-weight:bold;color:#ed145b"/>                                                    
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br />
+                                                    <textbox id="sumall" style="font-weight:bold;color:#ed145b"/>
+                                                    <label value="บาท"/>
+                                                </hbox>
+                                                                                      
+
+                                        </vbox>
+
+                                    </panelchildren>
+                            </panel>           
+                        </center>
+                    </borderlayout>
+                    
+                    </center>
+
+                <south size="40px" border="0" style="background: none repeat scroll 0 0 ;">
+                    <toolbar mold="panel" align="center">
+                            423494 COMPUTER ENGINEERING STUDY PROJECT | ADMIN
+                            <toolbarbutton label="PORNCHAI BUASANG"/>
+                    </toolbar>
+                </south>
+            </borderlayout>            
+        </div>
+
+    </window>
+
+</zk>

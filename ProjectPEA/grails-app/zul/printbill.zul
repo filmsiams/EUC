@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page title="::Payment::"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="projectpea.PrintbillComposer">
+
+        <div align="center"> 
+
+            <borderlayout height="1800px" width="1366px">
+                <north size="300px" border="0">
+                    <div align="center"> 
+                        <image src="ext/images/img/head-euc.png"/> 
+                    </div>
+
+                </north>    
+
+                <west width="270px" border="0" flex="true" splittable="false" margins="0,0,0,0">
+
+                    <vlayout spacing="10">
+                        
+                                    <a image="ext/images/img/home-2.png" hoverImage="ext/images/img/home-2.png" href="index.zul"/>
+
+                                    <a image="ext/images/img/btn-1-1.png" hoverImage="ext/images/img/btn-1-2.png" href="request.zul"/>
+                                    <a image="ext/images/img/list-1-1.png" hoverImage="ext/images/img/list-1-2.png" href="list.zul"/>
+
+                                    <a image="ext/images/img/btn-2-1.png" hoverImage="ext/images/img/btn-2-2.png" href="euc.zul"/>
+                                    <a image="ext/images/img/pay2.png" hoverImage="ext/images/img/pay2.png" href="payment.zul"/>
+                                    
+                                    <a image="ext/images/img/euc-1-2.png" hoverImage="ext/images/img/euc-1-2.png" href="type1.zul"/>
+                                    <a image="ext/images/img/euc-2-1.png" hoverImage="ext/images/img/euc-2-2.png" href="type2.zul"/>
+                                    <a image="ext/images/img/euc-3-1.png" hoverImage="ext/images/img/euc-3-2.png" href="type3.zul"/>
+                                    <a image="ext/images/img/euc-4-1.png" hoverImage="ext/images/img/euc-4-2.png" href="type4.zul"/>
+                                    <a image="ext/images/img/euc-5-1.png" hoverImage="ext/images/img/euc-5-2.png" href="type5.zul"/>
+                                    <a image="ext/images/img/euc-6-1.png" hoverImage="ext/images/img/euc-6-2.png" href="type6.zul"/>
+                                    <a image="ext/images/img/euc-7-1.png" hoverImage="ext/images/img/euc-7-2.png" href="type7.zul"/>
+                                    <a image="ext/images/img/euc-8-1.png" hoverImage="ext/images/img/euc-8-2.png" href="type8.zul"/>
+
+                                    <a image="ext/images/img/btn-3-1.png" hoverImage="ext/images/img/btn-3-2.png" href="admin.zul"/>
+                                    <a image="ext/images/img/userdata-1.png" hoverImage="ext/images/img/userdata-2.png" href="useredit.zul"/>  
+                                    
+                                                            
+
+                    </vlayout>
+                </west> 
+
+                <center>
+                    <borderlayout>
+                        <north border="0" height="120px">
+                            <panel>
+                                <panelchildren>
+                                    <div align="left">
+                                        <hbox>
+                                            <image src="ext/images/img/logo.png"/>
+                                            <vbox>                                                
+                                                <h:br />                                               
+                                                <label value="มหาวิทยาลัยเทคโนโลยีสุรนารี"/>
+                                                <label value="111 ,ถนนมหาวิทยาลัย ,เมือง ,จ.นครราชสีมา,"/>
+                                                <label value="ประเทศไทย ,30000 ไทย"/>
+                                            </vbox>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <h:br/><h:br/><h:br/><h:br/><h:br/><h:br/>
+                                            <image src="ext/images/img/online.gif"/>
+                                                                                        
+                                            <label value="User :" style="font-weight: bold;"/>
+                                            <label id="userlogin" style="color:red"/>
+
+                                            <h:br/><h:br/><h:br/>
+                                            
+                                            <vbox>
+                                                <a id="logout" image="ext/images/img/logout.png"/>
+                                                <image src="ext/images/img/offline.png"/>
+                                            </vbox>    
+                                            
+                                        </hbox>
+                                    </div>
+                                </panelchildren>           
+                            </panel>    
+
+                        </north>
+                        <center border="0">
+                            <panel>
+                                <panelchildren>
+                                     <label value="รายการชำระค่าไฟฟ้า" style="font-weight:bold;font-size:20px"/>
+                                     <h:br /><h:br />
+                                    <div align="left">
+                                    <vbox>
+                                        <hbox>
+                                            <label value="รหัสการไฟฟ้า"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="idbase" disabled="true" value="111SUT" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="หมายเลขผู้ใช้ไฟฟ้า"/>
+                                            <h:br /><h:br /><h:br />
+                                            <textbox id="iduse" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ใบแจ้งค่าไฟฟ้าเลขที่"/>
+                                            <h:br />
+                                            <textbox id="billno" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ประเภท"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="type" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="แรงดัน"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="press" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ประจำเดือน"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br />
+                                            <textbox id="month" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ชื่อ"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br />
+                                            <textbox id="name" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ที่อยู่"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="address" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="เลขอ่านครั้งหลัง"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="after" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="เลขอ่านครั้งก่อน"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="befor" disabled="true" width="500px"/>                                 
+                                        </hbox>
+
+                                        <hbox>
+                                            <label value="On Peak"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="onp" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="Off Peak"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="offp" disabled="true" width="500px"/>                                 
+                                        </hbox>
+
+
+                                        <hbox>
+                                            <label value="กิโลวัตต์/หน่วยที่ใช้"/>
+                                            <h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="use" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ค่าไฟฐาน"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="paybase" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="ค่า Ft"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="ftbase" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="รวมค่าไฟฟ้า"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <h:br /><h:br />
+                                            <textbox id="all" disabled="true" width="500px"/>                                 
+                                        </hbox>
+
+                                        <hbox>
+                                            <label value="ภาษีมูลค่าเพิ่ม"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="vat" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <hbox>
+                                            <label value="รวมที่ต้องชำระ"/>
+                                            <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                            <textbox id="sumall" disabled="true" width="500px"/>                                 
+                                        </hbox>
+                                        <h:br /><h:br />
+
+                                        <vbox>
+                                            <hbox>
+                                                <label value="สถานะชำระ" style="font-weight: bold"/>
+                                                <h:br /><h:br /><h:br /><h:br /><h:br /><h:br /><h:br />
+                                                <label id="st"/>
+                                            </hbox>
+                                            <h:br /><h:br />
+                                            
+                                                <hbox>
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />  
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />
+                                                    <h:br /><h:br /><h:br /><h:br />                                                      
+                                                    <button id="green" label="ชำระแล้ว" style="font-weight: bold;color:green;font-size:20px"/>
+                                                    <h:br /><h:br /><h:br /><h:br />                                                                                                                                                                      
+                                                    <button id="red" label="ค้างชำระ" disabled="true" style="font-weight: bold;color:red;font-size:20px"/>
+                                                </hbox>
+                                                                                                                        
+                                        </vbox>
+
+
+                                    </vbox>
+                                    </div>
+                                        <h:br /><h:br />
+
+                                        <button id="save" src="ext/images/img/save1.png"/>
+                                        <button id="print" src="ext/images/img/print1.png"/>
+                                        
+                                </panelchildren>
+                            </panel>                                      
+                        </center>
+                    </borderlayout>
+                    
+                    </center>
+
+                <south size="40px" border="0" style="background: none repeat scroll 0 0 ;">
+                    <toolbar mold="panel" align="center">
+                            423494 COMPUTER ENGINEERING STUDY PROJECT | ADMIN
+                            <toolbarbutton label="PORNCHAI BUASANG"/>
+                    </toolbar>
+                </south>
+            </borderlayout>            
+        </div>
+
+    </window>
+
+</zk>

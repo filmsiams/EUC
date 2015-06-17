@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page title="Energy Usage Calculator ::LOGIN::"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+
+    <style> 
+        body{
+            background-image:url('ext/images/login/bglogin.jpg');
+        }
+
+        .orange {
+           color: #fef4e9;
+           border: solid 1px #da7c0c;
+           background: #f78d1d;
+           background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+           background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+           filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+          }
+        .orange:hover {
+           background: #f47c20;
+           background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+           background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+           filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+          }
+        .orange:active {
+           color: #fcd3a5;
+           background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+           background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+           filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+          } 
+
+        .bigrounded {
+           -webkit-border-radius: 2em;
+           -moz-border-radius: 2em;
+           border-radius: 2em;
+        }
+
+    </style>
+
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <h:br />
+    <div align="center">
+
+    <window apply="projectpea.LoginComposer">
+        <image src="ext/images/login/top.png"/> 
+        <div align="center">                      
+                            
+                <image src="ext/images/login/user.png"/>               
+                <textbox id="user" placeholder="Login" mold="rounded"/>
+                
+                <h:br />
+                <image src="ext/images/login/key.png"/>
+                <textbox type="password" id="pass" placeholder="Password" mold="rounded"/>
+           
+            <h:br />
+            <h:br />
+            <button label="Login" id="login" sclass="orange bigrounded" width="200px" />
+            <h:br />
+            <h:br />
+            <label id="status" style="color:#ed1c24"/>        
+        </div>
+    </window>
+    </div>
+</zk>
